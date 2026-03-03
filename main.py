@@ -7,14 +7,30 @@ from money_machine import MoneyMachine
 
 #1) create objects of each class and see what they do 
 
-menu =  Menu()
+
+
+
 
 money_machine = MoneyMachine()
 coffe_maker = CoffeeMaker()
+menu =  Menu()
 
-coffe_maker.report()
-money_machine.report()
+is_on = True
 
+
+
+while is_on:
+    options  = menu.get_items()
+    choice = input(f"what woudl you like? ({options}): ") 
+    if choice == "off" :
+        is_on = False
+    elif choice == "report" : 
+        coffe_maker.report()
+        money_machine.report()
+    else: 
+        drink = menu.find_drink(choice)
+        print(drink)
+        
 
 
 
