@@ -9,7 +9,13 @@ from money_machine import MoneyMachine
 
 menu =  Menu()
 
-print(menu.get_items())
+money_machine = MoneyMachine()
+coffe_maker = CoffeeMaker()
 
-menu.find_drink()
+coffe_maker.report()
+money_machine.report()
+
+
+
+
 
